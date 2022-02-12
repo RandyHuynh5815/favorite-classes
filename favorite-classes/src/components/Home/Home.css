@@ -1,0 +1,10 @@
+.courseList {
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+form {
+    padding: 5px;
+}
