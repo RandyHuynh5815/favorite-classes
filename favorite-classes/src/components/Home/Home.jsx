@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from 'react'
 import Class from "../Class/Class";
+import ClassQL from "../ClassQL/ClassQL";
 import "./Home.css"
 
 export default function Home() {
@@ -31,8 +32,13 @@ export default function Home() {
                 <input type="text" onChange={handleChange} value={value}></input>
                 <button type="submit">Add Class</button>
             </form>
+            <h2>REST To The Test</h2>
             <div className="courseList">
                 {classes.map((favclass) => <Class key={favclass.classNum} num={favclass.classNum} name={favclass.name}/>)}
+            </div>
+            <h2>GraphQL Fancy Smamcy List</h2>
+            <div className="courseList">
+                {classes.map((favclass) => <ClassQL key={favclass.classNum} num={favclass.classNum} name={favclass.name}/>)}
             </div>
         </div>
     )
